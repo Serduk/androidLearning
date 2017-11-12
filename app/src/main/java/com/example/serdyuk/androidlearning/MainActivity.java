@@ -33,6 +33,6 @@ public class MainActivity extends Activity {
         brands.setText(recommendationResult.toString());
         System.out.println("Clicked!");
         System.out.println(brands_arr.getSelectedItem());
-        System.out.println("Results should be " + recommendationResult.toString());
+        System.out.println("Results should be:\n" + recommendationResult.toString());
     }
 }
