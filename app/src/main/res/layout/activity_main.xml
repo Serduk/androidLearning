@@ -7,7 +7,8 @@
     tools:context="com.example.serdyuk.androidlearning.MainActivity">
 
     <Spinner
-        android:id="@+id/color"
+        android:id="@+id/brands_arr"
+        android:entries="@array/brands_arr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -16,11 +17,11 @@
         />
     
     <TextView
-        android:id="@+id/textView"
-        android:text="@string/hello_world"
+        android:id="@+id/brands"
+        android:text="@string/brands"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/find_beer"
+        android:layout_alignStart="@+id/find_beer"
         android:layout_below="@+id/find_beer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -30,6 +31,7 @@
     <Button
         android:id="@+id/find_beer"
         android:text="@string/beer_button"
+        android:onClick="clickButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout_below="@+id/color"
