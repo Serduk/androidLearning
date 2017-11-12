@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends Activity {
@@ -27,8 +26,8 @@ public class MainActivity extends Activity {
         List<String> recommendations = beerExpert.getBrands(brands_arr.getSelectedItem().toString());
         StringBuilder recommendationResult = new StringBuilder();
 
-        for (int count = 0; count < recommendations.size(); count++) {
-            recommendationResult.append(recommendations.get(count)).append("\n");
+        for (String result : recommendations) {
+            recommendationResult.append(result).append("\n");
         }
 
         brands.setText(recommendationResult.toString());
