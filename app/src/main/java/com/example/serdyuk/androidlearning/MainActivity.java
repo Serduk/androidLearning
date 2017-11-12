@@ -6,7 +6,11 @@ import android.view.View;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends Activity {
+    private BeerExpert beerExpert = new BeerExpert();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +24,16 @@ public class MainActivity extends Activity {
 
         brands.setText(brands_arr.getSelectedItem().toString());
 
+        List<String> recommendations = beerExpert.getBrands(brands_arr.getSelectedItem().toString());
+        StringBuilder recommendationResult = new StringBuilder();
+
+        for (int count = 0; count < recommendations.size(); count++) {
+            recommendationResult.append(recommendations.get(count)).append("\n");
+        }
+
+        brands.setText(recommendationResult.toString());
         System.out.println("Clicked!");
         System.out.println(brands_arr.getSelectedItem());
+        System.out.println("Results should be " + recommendationResult.toString());
     }
 }
