@@ -18,8 +18,8 @@ public class MainActivity extends Activity {
     }
 
     public void clickButton(View view) {
-        TextView brands = (TextView) findViewById(R.id.brands);
-        Spinner brands_arr = (Spinner) findViewById(R.id.brands_arr);
+        TextView brands = findViewById(R.id.brands);
+        Spinner brands_arr = findViewById(R.id.brands_arr);
 
         brands.setText(brands_arr.getSelectedItem().toString());
 
