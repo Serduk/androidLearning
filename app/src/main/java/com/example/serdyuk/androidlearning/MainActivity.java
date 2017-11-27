@@ -21,8 +21,6 @@ public class MainActivity extends Activity {
         TextView brands = findViewById(R.id.brands);
         Spinner brands_arr = findViewById(R.id.brands_arr);
 
-        brands.setText(brands_arr.getSelectedItem().toString());
-
         List<String> recommendations = beerExpert.getBrands(brands_arr.getSelectedItem().toString());
         StringBuilder recommendationResult = new StringBuilder();
 
