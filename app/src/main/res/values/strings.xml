@@ -9,4 +9,10 @@
         <item>brown</item>
         <item>dark</item>
     </string-array>
+    <string name="title_activity_send_data">sendData</string>
+    <string name="title_activity_send_email">SendEmail</string>
+    <string name="send_to">To:</string>
+    <string name="body_message_hint">Insert valid body data</string>
+    <string name="send_button">Send</string>
+    <string name="hint_send_to">Insert_recipient_email</string>
 </resources>
